@@ -71,6 +71,9 @@ const AudioSource = React.createClass({
   render: function() {
     return (
       <div>
+        <h3>raw audio</h3>
+        <audio src={this.props.source} controls />
+        <h3>10 second snippet</h3>
         <a onClick={this.play} href='#' >play</a>
         <a href={this.state.file} download>download</a>
       </div>
