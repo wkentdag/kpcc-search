@@ -27,9 +27,9 @@ const AudioSource = React.createClass({
   trim: function () {
     let ctx = this.props.ctx
     let req = new XMLHttpRequest()
-    // req.open('GET', '/test.wav', true)
+    req.open('GET', '/test.wav', true)
     //  FIXME: the audio api is missing CORS headers; comment out above and uncomment below to test real audio
-    req.open('GET', this.props.source, true)
+    // req.open('GET', this.props.source, true)
     req.responseType = 'arraybuffer'
     req.onload = function () {
       ctx.decodeAudioData(req.response, function (buffer) {
