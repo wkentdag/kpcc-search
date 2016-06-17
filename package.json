@@ -38,9 +38,8 @@
   "repository": "https://github.com/wkentdag/kpcc-search",
   "scripts": {
     "deploy": "spike compile && ship public/ -to netlify",
-    "lint": "standard --verbose | snazzy",
+    "lint": "standard --verbose",
     "precommit": "npm run lint -s",
-    "pretest": "npm run lint -s",
     "start": "spike watch",
     "test": "NODE_ENV=test ava"
   }
